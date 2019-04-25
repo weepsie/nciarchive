@@ -1,0 +1,79 @@
+// Partial: Layout
+
+html,
+body {
+	min-height: 100%;
+
+    @include checkboxes;
+}
+
+.content {
+    background: $sckls-lightbeige;
+    padding-bottom: 30px;
+    position: relative;
+    z-index: 15;
+
+    .content-block {
+        background: white;
+        top: -45px;
+        position: relative;
+        padding: 20px 25px;
+        box-shadow: 0 2px 2px rgba(0,0,0,.25);
+        margin-bottom: 25px;
+
+        &.less-padding {
+            padding: 6px;
+        }
+        &.extra-padding {
+            padding: 20px 40px;
+
+            @media #{$screen-xs} {
+                padding: 16px 20px;
+            }
+        }
+
+        @media #{$screen-xs} {
+            padding: 16px 20px;
+        }
+    }
+}
+
+.pagination-nav {
+    text-align: center;
+
+    .pagination {
+        > li {
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+    .page-input {
+        padding: 0 10px;
+    }
+    input {
+        max-width: 60px;
+        padding: 5px 8px;
+        margin-right: 5px;
+        text-align: center;
+        font-weight: bold;
+    }
+    a {
+        border-radius: 4px;
+    }
+}
+
+#lightGallery-outer {
+    background: #0d0d0d !important;
+    background: rgba(#0d0d0d, 0.9) !important;    
+}
+#lightGallery-close {
+    opacity: 0.5;
+
+    &:hover {
+        opacity: 1;
+    }
+    &:after {
+        font-size: 3.6rem !important;
+        font-weight: 100 !important;
+    }
+}

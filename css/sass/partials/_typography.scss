@@ -1,0 +1,119 @@
+// Partials: Typography
+
+html, body {
+    font-family: $primary-font-face;
+	font-size: 62.5%;
+    font-size: 1.4rem;
+
+    * {
+        font-family: $primary-font-face;
+    }
+
+    h1, h2, h3 {
+        font-family: $secondary-font-face;
+    
+        a {
+            font-family: $secondary-font-face;
+        }
+    }
+    h1 {
+        font-size: 4.2rem;
+        margin-bottom: 20px;
+
+        @media #{$screen-sm} {
+            font-size: 3.6rem;
+            line-height: 3.8rem;
+        }
+        @media #{$screen-xs} {
+            font-size: 3.2rem;
+            line-height: 3.6rem;
+            margin-bottom: 15px;
+        }
+
+        > small {
+            font-size: 50%;
+            margin-left: 10px;
+        }
+        > a {
+            color: inherit;
+
+            &:hover {
+                color: inherit;
+                opacity: 0.8;
+            }
+        }
+    }
+    h4 {
+        &.not-featured {
+            text-align: center;
+            padding: 110px 0;
+            height: 255px;
+            font-style: italic;
+            font-weight: 700;
+            color: #CCC;
+        }
+    }
+    h5 {
+        &.header-label {
+            text-align: center;
+            font-weight: 900;
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            color: $sckls-darkbeige;
+            margin-top: 15px;
+            margin-bottom: 20px;
+            
+            &:hover {
+                text-decoration: none;
+            }
+            &:before,
+            &:after {
+                content: '\2014';
+                margin: 0 8px;
+
+                @media #{$screen-xs} {
+                    margin: 0;
+                    content: '';
+                }
+            }
+        }
+    }
+    h6 {
+        font-size: 1.3rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: darken($sckls-lightbeige, 20%);
+    }
+    
+    p, span {
+        font-family: $secondary-font-face;
+        font-size: 1.8rem;
+        font-weight: 400;
+        line-height: 3rem;
+
+        > a {
+            font-family: $secondary-font-face;
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        @media #{$screen-xs} {
+            line-height: 2.7rem;
+        }
+    }
+    a {
+        text-decoration: none !important;
+    
+        &:hover {
+            text-decoration: none;
+        }
+        &.link-to-exhibit {
+            font-style: italic;
+            letter-spacing: -0.5px;
+
+            &:before {
+                content: '\00a0\00a0'
+            }
+        }
+    }
+}
